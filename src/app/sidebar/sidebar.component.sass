@@ -1,0 +1,53 @@
+$asideBg: rgb(14, 26, 53)
+$activeLink: #1895E0
+$link: #fff
+$logoBg: #293e6d
+.aside
+    width: 318px
+    background-color: $asideBg
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    &__logo
+        text-align: center
+        padding: 20px 0
+        background-color: $logoBg
+        color: #fff
+        font-family: 'Fira_Sans', sans-serif
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 50px
+
+
+.menu
+    &__link
+        display: block
+        padding: 15px 0 15px 30px
+        color: $link
+        font-family: 'Roboto', sans-serif
+        font-weight: 500 
+        font-size: 20px
+        transition: all .3s
+        position: relative
+        text-decoration: none
+         -webkit-transition-property: padding
+        -webkit-transition-duration: 0.5s
+        transition-property: padding
+        transition-duration: 0.5s
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 100%
+            background-color: $activeLink
+            transition: all .3s
+        &:hover, &--active
+            background-color: rgb(18, 33, 67)
+            cursor: pointer
+            padding: 15px 0 15px 60px
+            &:before
+                width: 10px
+                background-color: rgb(85, 132, 255)

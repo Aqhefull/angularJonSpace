@@ -1,0 +1,13 @@
+<div class="workflow-posts">
+  <div *ngFor="let post of posts; let i = index">
+    <div class="workflow-item">
+      <div class="workflow-item__title">
+        <h4>{{post.title}}</h4>
+        <div class="workflow-item__remove" (click)="removePost(i)">&#10006;</div>
+      </div>
+      <div class="workflow-item__text">
+        <p>{{post.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
