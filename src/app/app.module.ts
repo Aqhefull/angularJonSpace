@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
+import { TopnavComponent } from './topnav/topnav.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAWjAJSY0ZazUau9q9OhfT_p6qkpuAmA2U",
@@ -39,7 +40,8 @@ export const firebaseConfig = {
     WorkflowPostsComponent,
     LoginComponent,
     EmailComponent,
-    SignupComponent
+    SignupComponent,
+    TopnavComponent
   ],
   imports: [
     BrowserModule,

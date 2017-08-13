@@ -8,7 +8,7 @@ import 'rxjs/Rx';
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
-  styleUrls: ['./email.component.css']
+  styleUrls: ['./email.component.sass']
 })
 export class EmailComponent implements OnInit {
 
