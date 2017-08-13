@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
     this.afAuth.authState.subscribe((user: firebase.User)  => {
       if (user) {
-        this.router.navigateByUrl('/members');
+        this.router.navigateByUrl('/dashboard');
       }
     });
   }
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
     .then(
       (success) => {
-        this.router.navigate(['/members']);
+        this.router.navigate(['/dashboard']);
       }).catch(
       (err) => {
         this.error = err;
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
       (success) => {
-        this.router.navigate(['/members']);
+        this.router.navigate(['/dashboard']);
       }).catch(
       (err) => {
         this.error = err;

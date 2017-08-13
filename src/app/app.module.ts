@@ -19,7 +19,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
-import { MembersComponent } from './members/members.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAWjAJSY0ZazUau9q9OhfT_p6qkpuAmA2U",
@@ -40,8 +39,7 @@ export const firebaseConfig = {
     WorkflowPostsComponent,
     LoginComponent,
     EmailComponent,
-    SignupComponent,
-    MembersComponent
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -56,9 +54,8 @@ export const firebaseConfig = {
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
       { path: 'login-email', component: EmailComponent },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'workflow', component: WorkflowComponent },
-      { path: 'members', component: MembersComponent, canActivate: [AuthGuard] }
+      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+      { path: 'workflow', component: WorkflowComponent }
     ])
   ],
   providers: [AuthGuard],
