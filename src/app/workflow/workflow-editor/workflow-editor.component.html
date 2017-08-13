@@ -1,5 +1,5 @@
 <div class="workflow-editor">
-  <form #workflowForm="ngForm" (ngSubmit)="addPost( newPostTitle, newPostText )" autocomplete="off">
+  <form #workflowForm="ngForm" (ngSubmit)="addPost( newPostTitle, newPostText ); workflowForm.reset()" autocomplete="off">
     <input #newPostTitle type="text" placeholder="Enter title of task.."  name="newPostTitle" ngModel minlength="4" maxlength="50" required>
     <textarea #newPostText type="text" placeholder="Text.."  name="newPostText" ngModel minlength="5" rows="10" required></textarea>
       <div>
