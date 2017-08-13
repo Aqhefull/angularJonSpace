@@ -36,6 +36,7 @@
     "@types/node": "~6.0.60",
     "angular-cli-ghpages": "^0.5.1",
     "codelyzer": "~3.0.1",
+    "deploy": "ng build --prod && angular-cli-ghpages --branch master",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -47,7 +48,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.3",
-    "deploy": "ng build --prod && angular-cli-ghpages --branch master"
+    "typescript": "~2.3.3"
   }
 }
