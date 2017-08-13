@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   error: any;
-  user: Observable<firebase.User>;
-  constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase, private router: Router) {
+
+  constructor(public afAuth: AngularFireAuth, private router: Router) {
 
     this.afAuth.authState.subscribe((user: firebase.User)  => {
       if (user) {

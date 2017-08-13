@@ -52,28 +52,13 @@ export const firebaseConfig = {
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'workflow',
-        component: WorkflowComponent
-      },
-      {
-        path: 'members',
-        component: MembersComponent,
-        canActivate: [AuthGuard]
-      }
+      { path: '', redirectTo: 'login', pathMatch: 'full'},
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'login-email', component: EmailComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'workflow', component: WorkflowComponent },
+      { path: 'members', component: MembersComponent, canActivate: [AuthGuard] }
     ])
   ],
   providers: [AuthGuard],
