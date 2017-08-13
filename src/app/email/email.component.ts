@@ -18,7 +18,7 @@ export class EmailComponent implements OnInit {
   constructor(public afAuth: AngularFireAuth, private router: Router) {
     this.afAuth.authState.subscribe(auth => {
       if (auth) {
-        this.router.navigateByUrl('/members');
+        this.router.navigateByUrl('/dashboard');
       }
     });
   }
@@ -30,7 +30,7 @@ export class EmailComponent implements OnInit {
       firebase.auth().signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
         (success) => {
           console.log(success);
-          this.router.navigate(['/members']);
+          this.router.navigate(['/dashboard']);
         }).catch(
         (err) => {
           console.log(err);
