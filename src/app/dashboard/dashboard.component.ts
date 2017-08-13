@@ -9,12 +9,8 @@ import { PostService } from '../_services/post.service';
   providers: [PostService]
 })
 export class DashboardComponent implements OnInit {
-
-  constructor( private ps: PostService ) {}
-
+  constructor(private ps: PostService ) {}
   posts = this.ps.getPosts();
-
   ngOnInit() {
   }
-
 }
